@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content=" initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Bhar</title>
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/fontawesome.css" />
+    <link rel="stylesheet" href="/css/templatemo-sixteen.css" />
+    <link rel="stylesheet" href="/css/owl.css" />
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <h2>B<em>har</em></h2>
+            <!-- <img src="../images/Flag_of_Tunisia.jpg" alt="Flag_of_Tunisia" style="height: 48px;"> -->
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item active">
+                <a class="nav-link" href="/"
+                  >Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li> -->
+              <!-- 64a0123718a82572ec9031c7 -->
+              <% if(verifUser && verifType=='admin' ) {%>
+              <!-- <li class="nav-item">
+                <h3 style="color: aliceblue;">Admin</h3>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="/addCour">Add Book</a>
+              </li> -->
+
+              <li class="nav-item">
+                <a class="nav-link" href="/GererEducation">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/GererMarine">Drina</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/GererOtherAct">Other Activities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/GererAgricultural">Agricultural</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/GererUrban">Urban And Rural</a>
+              </li>
+              <%}else{%> <% if(verifUser && verifType=='Education' ) {%>
+              <li class="nav-item">
+                <a class="nav-link" href="/Niveau">Education</a>
+              </li>
+              <%} else{ %> <% if(verifUser && verifType=='Other Activities' )
+              {%>
+              <li class="nav-item">
+                <a class="nav-link" href="/ClientOtherAct">Other Activities</a>
+              </li>
+              <%} else{ %> <% if(verifUser && verifType=='Drina' ) {%>
+              <li class="nav-item">
+                <a class="nav-link" href="/ClientMarine">Drina</a>
+              </li>
+              <%} else{ %> <% if(verifUser && verifType=='Agricultural' ) {%>
+              <li class="nav-item">
+                <a class="nav-link" href="/ClientAgricultural">Agricultural</a>
+              </li>
+              <%} else{ %> <% if(verifUser && verifType=='Urban and Rural' ) {%>
+              <li class="nav-item">
+                <a class="nav-link" href="/ClientUrban">Urban And Rural</a>
+              </li>
+              <%} else{ %>
+              <li class="nav-item">
+                <a class="nav-link" href="/register?type=Education"
+                  >Education</a
+                >
+                <!-- <a class="nav-link" href="/register1?type=Education">Education</a> -->
+                <!-- <a class="nav-link" href="/next-page?name=Education">Education</a> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register?type=Drina">Drina</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register?type=Other%20Activities"
+                  >Other activities</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register?type=Agricultural"
+                  >Agricultural</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register?type=Urban%20and%20Rural"
+                  >Urban And Rural</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <!-- <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                  </li> -->
+              <% } %> <% } %> <% } %> <% } %> <% } %> <% } %>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact Us</a>
+              </li> -->
+            </ul>
+            <% if(verifUser) {%>
+            <form
+              class="form-inline my-2 my-lg-0"
+              method="POST"
+              action="/logout"
+            >
+              <button class="btn btn-danger btn-sm" type="submit">
+                Log out
+              </button>
+            </form>
+            <% } %>
+          </div>
+          <!-- <div class="banner-item-04">
+          <div class="text-content">
+            <h4>m</h4>
+            <h2></h2>
+          </div>
+        </div> -->
+        </div>
+        <img
+          src="../images/Flag_of_Tunisia.jpg"
+          alt="Flag_of_Tunisia"
+          style="height: 48px; margin-right: 17px"
+        />
+      </nav>
+    </header>
+  </body>
+</html>
