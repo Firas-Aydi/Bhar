@@ -74,12 +74,6 @@ app.use("/", routeCours);
 app.get("/about", (req, res, next) => {
   res.render("about", { verifUser: req.session.userId,verifType: req.session.type });
 });
-// app.get("/mybooks", (req, res, next) => {
-//   res.render("mybooks", { verifUser: req.session.userId });
-// });
-// app.get("/books", (req, res, next) => {
-//   res.render("books");
-// });
 // app.get("/details", (req, res, next) => {
 //   res.render("details");
 // });
